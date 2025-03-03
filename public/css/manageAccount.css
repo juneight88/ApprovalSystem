@@ -1,0 +1,165 @@
+body {
+  background: rgba(223, 224, 224, 0.65); /* Light background for readability */
+  backdrop-filter: blur(6px); /* Soft blur effect */
+  position: relative;
+}
+
+/* Transparent background logo */
+body::before {
+  content: "";
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  width: 840px; /* Adjust logo size */
+  height: 840px;
+  background: url('/images/smcc-logo.png') no-repeat center center;
+  background-size: contain;
+  opacity: 0.08; /* Adjust transparency */
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin-top: 30px;
+}
+
+h3 {
+  margin-bottom: 10px;
+  color: #555;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #000000;
+  color: white;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+button {
+  padding: 6px 12px;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.delete-button {
+  background-color: #f44336;
+}
+
+.delete-button:hover {
+  background-color: #e53935;
+}
+
+form {
+  display: inline;
+}
+
+/* New styles for inline edit form */
+.edit-form {
+  display: none;
+}
+
+.edit-row {
+  display: none;
+}
+
+.edit-button {
+  background-color: #FF9800;
+}
+
+.edit-button:hover {
+  background-color: #fb8c00;
+}
+
+.cancel-button {
+  background-color: #BDBDBD;
+}
+
+.cancel-button:hover {
+  background-color: #9e9e9e;
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 50%; /* Position at the center vertically */
+  left: 50%; /* Position at the center horizontally */
+  transform: translate(-50%, -50%); /* Adjust the positioning to truly center */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: none; /* Hide by default */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+/* Adjust logout button position */
+.logout-btn {
+  position: fixed;
+  margin-top: 150px; /* Places it at the bottom */
+  right: 30px; /* Aligns it slightly inward */
+  background-color: #d9534f;
+  color: white;
+  padding: 12px 30px; /* Adjusted padding for better size */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+
+
+

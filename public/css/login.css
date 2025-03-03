@@ -1,0 +1,173 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Background Image */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/smcc-school.jpg') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(3px) brightness(0.7);
+    transform: scaleX(-1);
+    z-index: -1;
+}
+
+/* Logo */
+.logo {
+    width: 250px;
+    margin-bottom: 15px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Login Container */
+.login-container {
+    background: rgba(255, 255, 255, 0.5); /* More contrast */
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    animation: slideUp 0.7s ease-in-out;
+}
+
+/* Login Box */
+.login-box {
+    padding: 20px;
+}
+
+/* Input Group */
+.input-group {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    margin: 12px 0;
+    width: 100%;
+    overflow: hidden;
+    transition: border-color 0.3s;
+}
+
+.input-group:hover {
+    border-color: #007bff;
+}
+
+/* Icon inside Input */
+.input-group .input-group-text {
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    color: #007bff;
+    transition: 0.3s;
+}
+
+/* Input Fields */
+.input-group input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    background: transparent;
+    color: #333;
+}
+
+/* Login Button */
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #2166b1;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 25px;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .logo {
+        width: 180px;
+    }
+
+    .login-container {
+        width: 95%;
+        max-width: 350px;
+        padding: 20px;
+    }
+
+    .btn-primary {
+        font-size: 16px;
+    }
+
+    .input-group {
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 150px;
+    }
+
+    .login-container {
+        width: 100%;
+        max-width: 320px;
+        padding: 15px;
+    }
+
+    .btn-primary {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .input-group {
+        border-radius: 15px;
+    }
+
+    .input-group .input-group-text {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .input-group input {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
