@@ -9,7 +9,7 @@ class AddSignaturePathToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('signature_path')->nullable()->after('profile_picture');
+            $table->string('signature_path')->nullable();
         });
     }
 
